@@ -49,12 +49,11 @@ const reverse = (str) => {
   while (stackReverse.length > 0) {
     reverseStr += stackReverse.pop();
   }
+  if (reverseStr === str)
+    return console.log('true the word is palindrome', reverseStr);
 
-  if (reverseStr === str) {
-    console.log('true the word is palindrome', reverseStr);
-  } else {
-    console.log('false the word is not palindrome', reverseStr);
-  }
+  return console.log('false the word is not palindrome', reverseStr);
+
   return reverseStr;
 };
 
